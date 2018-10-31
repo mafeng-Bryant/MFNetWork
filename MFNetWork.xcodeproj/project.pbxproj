@@ -17,6 +17,7 @@
 		E253A5B521898CEC00CBC700 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253A5B321898CEC00CBC700 /* ViewController.xib */; };
 		E253A5BA21898E5200CBC700 /* MFNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5B921898E5200CBC700 /* MFNetWorkManager.m */; };
 		E253A5BE2189B2EB00CBC700 /* MFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5BD2189B2EB00CBC700 /* MFRequest.m */; };
+		E253A5C42189DF0800CBC700 /* MFRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5C32189DF0800CBC700 /* MFRequestManager.m */; };
 		EFD9729303AE9DEA5EFE1758 /* libPods-MFNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		E253A5BB218991E000CBC700 /* MFNetWorkHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkHeader.h; sourceTree = "<group>"; };
 		E253A5BC2189B2EB00CBC700 /* MFRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFRequest.h; sourceTree = "<group>"; };
 		E253A5BD2189B2EB00CBC700 /* MFRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFRequest.m; sourceTree = "<group>"; };
+		E253A5C22189DF0800CBC700 /* MFRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFRequestManager.h; sourceTree = "<group>"; };
+		E253A5C32189DF0800CBC700 /* MFRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFRequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				E253A5B921898E5200CBC700 /* MFNetWorkManager.m */,
 				E253A5BC2189B2EB00CBC700 /* MFRequest.h */,
 				E253A5BD2189B2EB00CBC700 /* MFRequest.m */,
+				E253A5C22189DF0800CBC700 /* MFRequestManager.h */,
+				E253A5C32189DF0800CBC700 /* MFRequestManager.m */,
 			);
 			path = MFNetWork;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				E253A5BA21898E5200CBC700 /* MFNetWorkManager.m in Sources */,
 				E253A5BE2189B2EB00CBC700 /* MFRequest.m in Sources */,
 				E253A58D2189898000CBC700 /* main.m in Sources */,
+				E253A5C42189DF0800CBC700 /* MFRequestManager.m in Sources */,
 				E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
