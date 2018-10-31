@@ -32,34 +32,40 @@ typedef void(^MFDownloadSuccessBlock)(id responseObject);
 typedef void(^MFDownloadProgressBlock)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress);
 typedef void(^MFDownloadFailureBlock)(NSURLSessionTask *task, NSError *error, NSString* resumableDataPath);
 
+
 /**
  *  HTTP Request method
  */
-typedef NS_ENUM(NSInteger, MFRequestMethod) {
-    MFRequestMethodGET = 10000,
+typedef enum {
+    MFRequestMethodGET,
     MFRequestMethodPOST,
-    MFRequestMethodPUT,
-    MFRequestMethodDELETE,
-};
+    MFRequestMethodPUT
+}MFRequestMethodType;
 
 /**
  *  Request type
  */
-typedef NS_ENUM(NSInteger, MFRequestType) {
-    MFRequestTypeNormal = 20000,
+typedef enum {
+    MFRequestTypeNormal,
     MFRequestTypeUpload,
     MFRequestTypeDownload
-};
+}MFRequestType;
 
 /**
  *  Manual operation by user (start,suspend,resume,cancel)
  */
-typedef NS_ENUM(NSInteger, MFDownloadManualOperation) {
-    MFDownloadManualOperationStart = 80000,
+typedef enum {
+    MFDownloadManualOperationStart,
     MFDownloadManualOperationSuspend,
     MFDownloadManualOperationResume,
-    MFDownloadManualOperationCancel,
-};
+    MFDownloadManualOperationCancel
+}MFDownloadManualOperationType;
+
+typedef enum {
+    MFRequestPrintLogTypeNone, //no request log will be printed
+    MFRequestPrintLogTypeJSON, //request log will be printed with json format
+    MFRequestPrintLogTypeNSObject //request log will be printed with NSObject format,e.g:NSArray,NSDictionary
+}MFRequestPrintLogType;
 
 
 #endif /* MFNetWorkHeader_h */
