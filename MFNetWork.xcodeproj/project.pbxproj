@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A57E2189897F00CBC700 /* AppDelegate.m */; };
 		E253A5822189897F00CBC700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5812189897F00CBC700 /* ViewController.m */; };
-		E253A5852189897F00CBC700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E253A5832189897F00CBC700 /* Main.storyboard */; };
 		E253A5872189898000CBC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E253A5862189898000CBC700 /* Assets.xcassets */; };
 		E253A58A2189898000CBC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E253A5882189898000CBC700 /* LaunchScreen.storyboard */; };
 		E253A58D2189898000CBC700 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A58C2189898000CBC700 /* main.m */; };
 		E253A5972189898000CBC700 /* MFNetWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5962189898000CBC700 /* MFNetWorkTests.m */; };
 		E253A5A22189898000CBC700 /* MFNetWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5A12189898000CBC700 /* MFNetWorkUITests.m */; };
+		EFD9729303AE9DEA5EFE1758 /* libPods-MFNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D430FAF63C8A46A72C3EF99 /* Pods-MFNetWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFNetWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-MFNetWork/Pods-MFNetWork.release.xcconfig"; sourceTree = "<group>"; };
+		48D52D0EE120D6E117E58AC1 /* Pods-MFNetWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFNetWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MFNetWork/Pods-MFNetWork.debug.xcconfig"; sourceTree = "<group>"; };
+		B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MFNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A57A2189897F00CBC700 /* MFNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A57D2189897F00CBC700 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E253A57E2189897F00CBC700 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E253A5802189897F00CBC700 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E253A5812189897F00CBC700 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E253A5842189897F00CBC700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E253A5862189898000CBC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E253A5892189898000CBC700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E253A58B2189898000CBC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD9729303AE9DEA5EFE1758 /* libPods-MFNetWork.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC656628CBF628533371F85D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E253A5712189897F00CBC700 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,8 @@
 				E253A5952189898000CBC700 /* MFNetWorkTests */,
 				E253A5A02189898000CBC700 /* MFNetWorkUITests */,
 				E253A57B2189897F00CBC700 /* Products */,
+				F29F51242799347C4300A937 /* Pods */,
+				DC656628CBF628533371F85D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +118,6 @@
 				E253A57E2189897F00CBC700 /* AppDelegate.m */,
 				E253A5802189897F00CBC700 /* ViewController.h */,
 				E253A5812189897F00CBC700 /* ViewController.m */,
-				E253A5832189897F00CBC700 /* Main.storyboard */,
 				E253A5862189898000CBC700 /* Assets.xcassets */,
 				E253A5882189898000CBC700 /* LaunchScreen.storyboard */,
 				E253A58B2189898000CBC700 /* Info.plist */,
@@ -132,6 +144,15 @@
 			path = MFNetWorkUITests;
 			sourceTree = "<group>";
 		};
+		F29F51242799347C4300A937 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48D52D0EE120D6E117E58AC1 /* Pods-MFNetWork.debug.xcconfig */,
+				0D430FAF63C8A46A72C3EF99 /* Pods-MFNetWork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +160,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E253A5A62189898000CBC700 /* Build configuration list for PBXNativeTarget "MFNetWork" */;
 			buildPhases = (
+				675A58E6583F44083AC3A61A /* [CP] Check Pods Manifest.lock */,
 				E253A5762189897F00CBC700 /* Sources */,
 				E253A5772189897F00CBC700 /* Frameworks */,
 				E253A5782189897F00CBC700 /* Resources */,
@@ -237,7 +259,6 @@
 			files = (
 				E253A58A2189898000CBC700 /* LaunchScreen.storyboard in Resources */,
 				E253A5872189898000CBC700 /* Assets.xcassets in Resources */,
-				E253A5852189897F00CBC700 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +277,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		675A58E6583F44083AC3A61A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MFNetWork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E253A5762189897F00CBC700 /* Sources */ = {
@@ -300,14 +342,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E253A5832189897F00CBC700 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E253A5842189897F00CBC700 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E253A5882189898000CBC700 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,9 +467,11 @@
 		};
 		E253A5A72189898000CBC700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D52D0EE120D6E117E58AC1 /* Pods-MFNetWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = MFNetWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +485,11 @@
 		};
 		E253A5A82189898000CBC700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D430FAF63C8A46A72C3EF99 /* Pods-MFNetWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = MFNetWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
