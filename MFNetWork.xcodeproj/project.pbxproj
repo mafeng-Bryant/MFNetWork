@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A57E2189897F00CBC700 /* AppDelegate.m */; };
-		E253A5822189897F00CBC700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5812189897F00CBC700 /* ViewController.m */; };
 		E253A5872189898000CBC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E253A5862189898000CBC700 /* Assets.xcassets */; };
 		E253A58A2189898000CBC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E253A5882189898000CBC700 /* LaunchScreen.storyboard */; };
 		E253A58D2189898000CBC700 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A58C2189898000CBC700 /* main.m */; };
 		E253A5972189898000CBC700 /* MFNetWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5962189898000CBC700 /* MFNetWorkTests.m */; };
 		E253A5A22189898000CBC700 /* MFNetWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5A12189898000CBC700 /* MFNetWorkUITests.m */; };
+		E253A5B421898CEC00CBC700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5B221898CEC00CBC700 /* ViewController.m */; };
+		E253A5B521898CEC00CBC700 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253A5B321898CEC00CBC700 /* ViewController.xib */; };
+		E253A5BA21898E5200CBC700 /* MFNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5B921898E5200CBC700 /* MFNetWorkManager.m */; };
 		EFD9729303AE9DEA5EFE1758 /* libPods-MFNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +43,6 @@
 		E253A57A2189897F00CBC700 /* MFNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A57D2189897F00CBC700 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E253A57E2189897F00CBC700 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E253A5802189897F00CBC700 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E253A5812189897F00CBC700 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E253A5862189898000CBC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E253A5892189898000CBC700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E253A58B2189898000CBC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +53,13 @@
 		E253A59D2189898000CBC700 /* MFNetWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFNetWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A5A12189898000CBC700 /* MFNetWorkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkUITests.m; sourceTree = "<group>"; };
 		E253A5A32189898000CBC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E253A5B121898CEC00CBC700 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E253A5B221898CEC00CBC700 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E253A5B321898CEC00CBC700 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		E253A5B721898D7800CBC700 /* MFNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWork.h; sourceTree = "<group>"; };
+		E253A5B821898E5200CBC700 /* MFNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkManager.h; sourceTree = "<group>"; };
+		E253A5B921898E5200CBC700 /* MFNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkManager.m; sourceTree = "<group>"; };
+		E253A5BB218991E000CBC700 /* MFNetWorkHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +121,12 @@
 		E253A57C2189897F00CBC700 /* MFNetWork */ = {
 			isa = PBXGroup;
 			children = (
+				E253A5B621898D5500CBC700 /* MFNetWork */,
 				E253A57D2189897F00CBC700 /* AppDelegate.h */,
 				E253A57E2189897F00CBC700 /* AppDelegate.m */,
-				E253A5802189897F00CBC700 /* ViewController.h */,
-				E253A5812189897F00CBC700 /* ViewController.m */,
+				E253A5B121898CEC00CBC700 /* ViewController.h */,
+				E253A5B221898CEC00CBC700 /* ViewController.m */,
+				E253A5B321898CEC00CBC700 /* ViewController.xib */,
 				E253A5862189898000CBC700 /* Assets.xcassets */,
 				E253A5882189898000CBC700 /* LaunchScreen.storyboard */,
 				E253A58B2189898000CBC700 /* Info.plist */,
@@ -142,6 +151,17 @@
 				E253A5A32189898000CBC700 /* Info.plist */,
 			);
 			path = MFNetWorkUITests;
+			sourceTree = "<group>";
+		};
+		E253A5B621898D5500CBC700 /* MFNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				E253A5B721898D7800CBC700 /* MFNetWork.h */,
+				E253A5BB218991E000CBC700 /* MFNetWorkHeader.h */,
+				E253A5B821898E5200CBC700 /* MFNetWorkManager.h */,
+				E253A5B921898E5200CBC700 /* MFNetWorkManager.m */,
+			);
+			path = MFNetWork;
 			sourceTree = "<group>";
 		};
 		F29F51242799347C4300A937 /* Pods */ = {
@@ -258,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E253A58A2189898000CBC700 /* LaunchScreen.storyboard in Resources */,
+				E253A5B521898CEC00CBC700 /* ViewController.xib in Resources */,
 				E253A5872189898000CBC700 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E253A5822189897F00CBC700 /* ViewController.m in Sources */,
+				E253A5B421898CEC00CBC700 /* ViewController.m in Sources */,
+				E253A5BA21898E5200CBC700 /* MFNetWorkManager.m in Sources */,
 				E253A58D2189898000CBC700 /* main.m in Sources */,
 				E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */,
 			);
