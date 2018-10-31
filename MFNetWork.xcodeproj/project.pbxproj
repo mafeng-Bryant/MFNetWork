@@ -42,6 +42,7 @@
 		0D430FAF63C8A46A72C3EF99 /* Pods-MFNetWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFNetWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-MFNetWork/Pods-MFNetWork.release.xcconfig"; sourceTree = "<group>"; };
 		48D52D0EE120D6E117E58AC1 /* Pods-MFNetWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFNetWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MFNetWork/Pods-MFNetWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MFNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C630873B218A023C0014CED6 /* MFNetWorkProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkProtocol.h; sourceTree = "<group>"; };
 		E253A57A2189897F00CBC700 /* MFNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A57D2189897F00CBC700 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E253A57E2189897F00CBC700 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 			children = (
 				E253A5B721898D7800CBC700 /* MFNetWork.h */,
 				E253A5BB218991E000CBC700 /* MFNetWorkHeader.h */,
+				C630873B218A023C0014CED6 /* MFNetWorkProtocol.h */,
 				E253A5B821898E5200CBC700 /* MFNetWorkManager.h */,
 				E253A5B921898E5200CBC700 /* MFNetWorkManager.m */,
 				E253A5BC2189B2EB00CBC700 /* MFRequest.h */,
