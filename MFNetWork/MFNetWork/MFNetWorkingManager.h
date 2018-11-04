@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MFNetWork.h"
+#import "MFNetWorking.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MFNetWorkManager : NSObject
+@interface MFNetWorkingManager : NSObject
 
 /**
  *  单例模式
  *
  *  @return MFNetWorkManager实例
  */
-+ (MFNetWorkManager *)sharedInstance;
++ (MFNetWorkingManager *)sharedInstance;
 
 /**
  *  This method is used to add custom header

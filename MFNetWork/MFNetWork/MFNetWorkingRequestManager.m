@@ -6,28 +6,27 @@
 //  Copyright © 2018年 test. All rights reserved.
 //
 
-#import "MFRequestManager.h"
+#import "MFNetWorkingRequestManager.h"
 #import <pthread/pthread.h>
 #import "objc/runtime.h"
 #import "MFRequest.h"
-#import "MFNetWorkProtocol.h"
+#import "MFNetWorkingProtocol.h"
 
 #define Lock() pthread_mutex_lock(&_lock)
 #define Unlock() pthread_mutex_unlock(&_lock)
 
 static char currentRequestKey;
 
-@interface MFRequestManager()<MFNetworkProtocol>
+@interface MFNetWorkingRequestManager()<MFNetWorkingProtocol>
 {
     pthread_mutex_t _lock;
 }
 
 @end
 
+@implementation MFNetWorkingRequestManager
 
-@implementation MFRequestManager
-
-+ (MFRequestManager *)sharedInstance {
++ (MFNetWorkingRequestManager *)sharedInstance {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -181,7 +180,6 @@ static char currentRequestKey;
 - (void)handleRequesFailure:(MFRequest *)requestModel
 {
     MFLog(@"retain request");
-    
 }
 
 @end

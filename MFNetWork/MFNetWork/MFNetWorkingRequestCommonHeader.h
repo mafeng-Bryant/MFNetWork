@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MFRequestCommonHeader : NSObject
+@interface MFNetWorkingRequestCommonHeader : NSObject
 
 @property (nonatomic, readonly, strong) NSDictionary *customHeaders;
 
@@ -17,7 +17,7 @@
  *
  *  @return MFRequestCommonHeader实例
  */
-+ (MFRequestCommonHeader*)sharedInstance;
++ (MFNetWorkingRequestCommonHeader*)sharedInstance;
 
 /**
  *

@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MFNetWork.h"
+#import "MFNetWorking.h"
 //#import <AFNetworking.h>
 
-@interface MFNetWorkConfig : NSObject
+@interface MFNetWorkingConfig : NSObject
 @property (nonatomic,strong)   NSString      *host;          //request host
 @property (nonatomic,strong)  AFHTTPRequestSerializer  *requestSerializer ; //request serializer
 @property (nonatomic,strong)  AFHTTPResponseSerializer *responseSerializer ; //response serializer
@@ -21,7 +21,7 @@
  *
  *  @return MFNetWorkConfig实例
  */
-+ (MFNetWorkConfig *)sharedInstance;
++ (MFNetWorkingConfig *)sharedInstance;
 
 /**
  *  初始化网络模块，设置host
@@ -40,10 +40,6 @@
 + (void)initWithHost:(NSString *)host
    requestSerializer:(AFHTTPRequestSerializer *)requestSerializer
   responseSerializer:(AFHTTPResponseSerializer *)responseSerializer;
-
-
-
-
 
 
 @end

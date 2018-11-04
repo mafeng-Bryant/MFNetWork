@@ -6,25 +6,25 @@
 //  Copyright © 2018年 test. All rights reserved.
 //
 
-#import "MFNetWorkManager.h"
-#import "MFNetWorkRequestEngine.h"
-#import "MFRequestManager.h"
+#import "MFNetWorkingManager.h"
+#import "MFNetWorkingRequestEngine.h"
+#import "MFNetWorkingRequestManager.h"
 
-@interface MFNetWorkManager()
-@property (nonatomic,strong) MFNetWorkRequestEngine* requestEngine;
-@property (nonatomic,strong) MFRequestManager* requestManager;
+@interface MFNetWorkingManager()
+@property (nonatomic,strong) MFNetWorkingRequestEngine* requestEngine;
+@property (nonatomic,strong) MFNetWorkingRequestManager* requestManager;
 
 
 @end
 
-@implementation MFNetWorkManager
+@implementation MFNetWorkingManager
 
-+ (MFNetWorkManager *)sharedInstance
++ (MFNetWorkingManager *)sharedInstance
 {
-    static MFNetWorkManager *sharedManager = NULL;
+    static MFNetWorkingManager *sharedManager = NULL;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedManager = [[MFNetWorkManager alloc] init];
+        sharedManager = [[MFNetWorkingManager alloc] init];
     });
     return sharedManager;
 }
@@ -373,18 +373,18 @@
 
 #pragma mark set and get method
 
-- (MFNetWorkRequestEngine *)requestEngine
+- (MFNetWorkingRequestEngine *)requestEngine
 {    
     if (!_requestEngine) {
-        _requestEngine = [[MFNetWorkRequestEngine alloc] init];
+        _requestEngine = [[MFNetWorkingRequestEngine alloc] init];
     }
     return _requestEngine;
 }
 
-- (MFRequestManager *)requestManager
+- (MFNetWorkingRequestManager *)requestManager
 {
     if (!_requestManager) {
-        _requestManager = [MFRequestManager sharedInstance];
+        _requestManager = [MFNetWorkingRequestManager sharedInstance];
     }
     return _requestManager;
 }

@@ -13,14 +13,14 @@
 //a dictionary to hold all current request models
 typedef NSMutableDictionary<NSString*, MFRequest*> MFCurrentRequestModels;
 
-@interface MFRequestManager : NSObject
+@interface MFNetWorkingRequestManager : NSObject
 
 /**
  *  单例模式
  *
  *  @return MFRequestManager实例
  */
-+ (MFRequestManager*)sharedInstance;
++ (MFNetWorkingRequestManager*)sharedInstance;
 
 /**
  *

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MFNetWorkRequestBaseEngine.h"
-#import "MFNetWork.h"
+#import "MFNetWorkingRequestBaseEngine.h"
+#import "MFNetWorking.h"
 
-@interface MFNetWorkRequestEngine : MFNetWorkRequestBaseEngine
+@interface MFNetWorkingRequestEngine : MFNetWorkingRequestBaseEngine
 
 /**
  *  This method offers the most number of parameters of a certain network request.

@@ -1,5 +1,5 @@
 //
-//  MFNetWorkHeader.h
+//  MFNetWorkingHeader.h
 //  MFNetWork
 //
 //  Created by patpat on 2018/10/31.
@@ -10,6 +10,7 @@
 #define MFNetWorkHeader_h
 
 #import <AFNetworking/AFNetworking.h>
+#import "MFNetWorkingProtocol.h"
 
 #ifdef DEBUG
 #define MFLog(...) NSLog(@"%s line number:%d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
@@ -17,17 +18,19 @@
 #define MFLog(...)
 #endif
 
-/////////////////////////////////////////normal request call block/////////////////////////////////////////////////////////////////////////
+//---------------------------------------normal request call block-----------------------------------------------------------------------//
+
 typedef void(^MFSuccessBlock)(id responseObject);
 typedef void(^MFFailureBlock)(NSURLSessionTask* task, NSError *error, NSInteger statusCode);
 
-/////////////////////////////////////////upload request call block/////////////////////////////////////////////////////////////////////////
+//---------------------------------------upload request call block-----------------------------------------------------------------------//
+
 typedef void(^MFUploadSuccessBlock)(id responseObject);
 typedef void(^MFUploadProgressBlock)(NSProgress *uploadProgress);
 typedef void(^MFUploadFailureBlock)(NSURLSessionTask *task, NSError *error, NSInteger statusCode, NSArray<UIImage *>*uploadFailedImages);
 
+//---------------------------------------download request call block-----------------------------------------------------------------------//
 
-/////////////////////////////////////////download request call block///////////////////////////////////////////////////////////////////////
 typedef void(^MFDownloadSuccessBlock)(id responseObject);
 typedef void(^MFDownloadProgressBlock)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress);
 typedef void(^MFDownloadFailureBlock)(NSURLSessionTask *task, NSError *error, NSString* resumableDataPath);
@@ -39,7 +42,9 @@ typedef void(^MFDownloadFailureBlock)(NSURLSessionTask *task, NSError *error, NS
 typedef enum {
     MFRequestMethodGET,
     MFRequestMethodPOST,
-    MFRequestMethodPUT
+    MFRequestMethodPUT,
+    MFRequestMethodDELETE,
+    MFRequestMethodHEADER
 }MFRequestMethodType;
 
 /**
@@ -67,5 +72,11 @@ typedef enum {
     MFRequestPrintLogTypeNSObject //request log will be printed with NSObject format,e.g:NSArray,NSDictionary
 }MFRequestPrintLogType;
 
+
+static NSString *const MFRequestMethodGet     = @"GET";
+static NSString *const MFRequestMethodPost    = @"POST";
+static NSString *const MFRequestMethodHead    = @"HEAD";
+static NSString *const MFRequestMethodPut     = @"PUT";
+static NSString *const MFRequestMethodDelete  = @"DELETE";
 
 #endif /* MFNetWorkHeader_h */

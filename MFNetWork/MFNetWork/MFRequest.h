@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MFNetWorkHeader.h"
+#import "MFNetWorkingHeader.h"
 #import <UIKit/UIKit.h>
 
 @interface MFRequest : NSObject
@@ -26,6 +26,18 @@
 
 //request method
 @property (nonatomic, readwrite)  MFRequestMethodType method;
+
+//request header
+@property (nonatomic, strong, readonly) NSDictionary *responseHeaders;
+
+//request response code
+@property (nonatomic, readonly)  NSInteger responseStatusCode;
+
+//request absoluteString
+@property (nonatomic, strong, readonly) NSString *absoluteString;
+
+//request error
+@property (nonatomic,readwrite) NSError* error;
 
 //response responseObject
 @property (nonatomic, readwrite, strong) id responseObject;
@@ -111,6 +123,27 @@
 //download failure block
 @property (nonatomic, readwrite, copy)   MFDownloadFailureBlock downloadFailureBlock;
 
+//request reformer:对请求的数据统一做refrom处理，比如做签名，添加共用参数等
+@property (nonatomic, weak) id<MFRequestReformer> requestReformer;
+
+//response reformer:对返回的数据统一做refrom处理,比如对返回数据格式处理等
+@property (nonatomic, weak) id<MFResponseReformer> responseReformer;
+
+//拦截器:请求完成后调用，实现协议方法后，可以在方法里完成比如说对某一状态做处理。
+@property (nonatomic, weak) id<MFResponseInterceptor> interceptor;
+
+//注入器：初始化时，通过这个协议可以实现统一注入
+@property (nonatomic, weak) id<MFRequestInjector> injector;
+
+-(instancetype)initRequestUrl:(NSString*)url
+                       method:(MFRequestMethodType)method
+                   parameters:(id)parameters
+                    loadCache:(BOOL)loadCache
+                cacheDuration:(NSTimeInterval)cacheDuration
+                 successBlock:(MFSuccessBlock)successBlock
+                 failureBlock:(MFFailureBlock)failureBlock;
+
+
 //request type
 - (MFRequestType)requestType;
 
@@ -122,7 +155,6 @@
 
 //clear all blocks
 - (void)clearAllBlocks;
-
 
 @end
 

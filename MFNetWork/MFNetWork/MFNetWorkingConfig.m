@@ -6,13 +6,13 @@
 //  Copyright © 2018年 test. All rights reserved.
 //
 
-#import "MFNetWorkConfig.h"
+#import "MFNetWorkingConfig.h"
 
-@implementation MFNetWorkConfig
+@implementation MFNetWorkingConfig
 
-+ (MFNetWorkConfig *)sharedInstance
++ (MFNetWorkingConfig *)sharedInstance
 {
-    static MFNetWorkConfig *sharedInstance = nil;
+    static MFNetWorkingConfig *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
@@ -42,12 +42,12 @@
    requestSerializer:(AFHTTPRequestSerializer *)requestSerializer
   responseSerializer:(AFHTTPResponseSerializer *)responseSerializer
 {
-    [[MFNetWorkConfig sharedInstance] setHost:host];
+    [[MFNetWorkingConfig sharedInstance] setHost:host];
     if (requestSerializer) {
-        [[MFNetWorkConfig sharedInstance] setRequestSerializer:requestSerializer];
+        [[MFNetWorkingConfig sharedInstance] setRequestSerializer:requestSerializer];
     }
     if (responseSerializer) {
-        [[MFNetWorkConfig sharedInstance] setResponseSerializer:responseSerializer];
+        [[MFNetWorkingConfig sharedInstance] setResponseSerializer:responseSerializer];
     }
 }
 

@@ -6,13 +6,13 @@
 //  Copyright © 2018年 test. All rights reserved.
 //
 
-#import "MFRequestCommonHeader.h"
+#import "MFNetWorkingRequestCommonHeader.h"
 
-@implementation MFRequestCommonHeader
+@implementation MFNetWorkingRequestCommonHeader
 
-+ (MFRequestCommonHeader *)sharedInstance
++ (MFNetWorkingRequestCommonHeader *)sharedInstance
 {
-    static MFRequestCommonHeader *sharedInstance = nil;
+    static MFNetWorkingRequestCommonHeader *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
@@ -65,7 +65,7 @@
                           finished:(void(^)(id newHeaders,id newParameters))result
 {
     //reformer parameters
-    NSDictionary *commonParameters = [MFRequestCommonHeader commonHeaders];
+    NSDictionary *commonParameters = [MFNetWorkingRequestCommonHeader commonHeaders];
     NSDictionary *requestParameters = parameters;
     NSMutableDictionary *allParameters = [NSMutableDictionary dictionaryWithDictionary:commonParameters];
     if ([requestParameters isKindOfClass:[NSDictionary class]]) {
@@ -75,7 +75,7 @@
     NSDictionary *finalParameters = @{@"p":[self toJsonString:allParameters]};
     
     //reformer headers
-    NSDictionary *commonHeaders = [MFRequestCommonHeader commonParameters];
+    NSDictionary *commonHeaders = [MFNetWorkingRequestCommonHeader commonParameters];
     NSMutableDictionary *finalHeaders = [NSMutableDictionary dictionaryWithDictionary:commonHeaders];
 //    NSString *sign =  [PPSignatureGenerator generateSignatureWithParameters:allParameters];
 //    finalHeaders[@"sign"] = sign;

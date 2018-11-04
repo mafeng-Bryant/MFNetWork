@@ -10,7 +10,7 @@
 
 @class MFRequest;
 
-@interface MFNetWorkRequestBaseEngine : NSObject
+@interface MFNetWorkingRequestBaseEngine : NSObject
 
 - (void)addCustomHeaders;
 
