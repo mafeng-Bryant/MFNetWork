@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C681B4F9218E8BCA00ACFE0B /* MFNetWorkRequestBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B4F8218E8BCA00ACFE0B /* MFNetWorkRequestBaseEngine.m */; };
+		C681B4FC218E8D5600ACFE0B /* MFNetWorkRequestEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B4FB218E8D5600ACFE0B /* MFNetWorkRequestEngine.m */; };
+		C681B4FF218E9E5600ACFE0B /* MFRequestCommonHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B4FE218E9E5600ACFE0B /* MFRequestCommonHeader.m */; };
+		C681B502218EB66600ACFE0B /* MFNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B501218EB66600ACFE0B /* MFNetWorkConfig.m */; };
+		C681B505218ED71A00ACFE0B /* MFNetWorkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B504218ED71A00ACFE0B /* MFNetWorkUtils.m */; };
 		E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A57E2189897F00CBC700 /* AppDelegate.m */; };
 		E253A5872189898000CBC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E253A5862189898000CBC700 /* Assets.xcassets */; };
 		E253A58A2189898000CBC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E253A5882189898000CBC700 /* LaunchScreen.storyboard */; };
@@ -43,6 +48,16 @@
 		48D52D0EE120D6E117E58AC1 /* Pods-MFNetWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFNetWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MFNetWork/Pods-MFNetWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MFNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C630873B218A023C0014CED6 /* MFNetWorkProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkProtocol.h; sourceTree = "<group>"; };
+		C681B4F7218E8BCA00ACFE0B /* MFNetWorkRequestBaseEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkRequestBaseEngine.h; sourceTree = "<group>"; };
+		C681B4F8218E8BCA00ACFE0B /* MFNetWorkRequestBaseEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkRequestBaseEngine.m; sourceTree = "<group>"; };
+		C681B4FA218E8D5600ACFE0B /* MFNetWorkRequestEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkRequestEngine.h; sourceTree = "<group>"; };
+		C681B4FB218E8D5600ACFE0B /* MFNetWorkRequestEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkRequestEngine.m; sourceTree = "<group>"; };
+		C681B4FD218E9E5600ACFE0B /* MFRequestCommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFRequestCommonHeader.h; sourceTree = "<group>"; };
+		C681B4FE218E9E5600ACFE0B /* MFRequestCommonHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFRequestCommonHeader.m; sourceTree = "<group>"; };
+		C681B500218EB66600ACFE0B /* MFNetWorkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkConfig.h; sourceTree = "<group>"; };
+		C681B501218EB66600ACFE0B /* MFNetWorkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkConfig.m; sourceTree = "<group>"; };
+		C681B503218ED71A00ACFE0B /* MFNetWorkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkUtils.h; sourceTree = "<group>"; };
+		C681B504218ED71A00ACFE0B /* MFNetWorkUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkUtils.m; sourceTree = "<group>"; };
 		E253A57A2189897F00CBC700 /* MFNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A57D2189897F00CBC700 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E253A57E2189897F00CBC700 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -172,6 +187,16 @@
 				E253A5BD2189B2EB00CBC700 /* MFRequest.m */,
 				E253A5C22189DF0800CBC700 /* MFRequestManager.h */,
 				E253A5C32189DF0800CBC700 /* MFRequestManager.m */,
+				C681B4F7218E8BCA00ACFE0B /* MFNetWorkRequestBaseEngine.h */,
+				C681B4F8218E8BCA00ACFE0B /* MFNetWorkRequestBaseEngine.m */,
+				C681B4FA218E8D5600ACFE0B /* MFNetWorkRequestEngine.h */,
+				C681B4FB218E8D5600ACFE0B /* MFNetWorkRequestEngine.m */,
+				C681B4FD218E9E5600ACFE0B /* MFRequestCommonHeader.h */,
+				C681B4FE218E9E5600ACFE0B /* MFRequestCommonHeader.m */,
+				C681B500218EB66600ACFE0B /* MFNetWorkConfig.h */,
+				C681B501218EB66600ACFE0B /* MFNetWorkConfig.m */,
+				C681B503218ED71A00ACFE0B /* MFNetWorkUtils.h */,
+				C681B504218ED71A00ACFE0B /* MFNetWorkUtils.m */,
 			);
 			path = MFNetWork;
 			sourceTree = "<group>";
@@ -339,10 +364,15 @@
 			files = (
 				E253A5B421898CEC00CBC700 /* ViewController.m in Sources */,
 				E253A5BA21898E5200CBC700 /* MFNetWorkManager.m in Sources */,
+				C681B505218ED71A00ACFE0B /* MFNetWorkUtils.m in Sources */,
 				E253A5BE2189B2EB00CBC700 /* MFRequest.m in Sources */,
+				C681B4F9218E8BCA00ACFE0B /* MFNetWorkRequestBaseEngine.m in Sources */,
+				C681B4FF218E9E5600ACFE0B /* MFRequestCommonHeader.m in Sources */,
 				E253A58D2189898000CBC700 /* main.m in Sources */,
 				E253A5C42189DF0800CBC700 /* MFRequestManager.m in Sources */,
+				C681B502218EB66600ACFE0B /* MFNetWorkConfig.m in Sources */,
 				E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */,
+				C681B4FC218E8D5600ACFE0B /* MFNetWorkRequestEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

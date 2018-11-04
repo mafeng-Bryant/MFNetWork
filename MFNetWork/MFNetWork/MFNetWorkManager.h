@@ -20,6 +20,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (MFNetWorkManager *)sharedInstance;
 
+/**
+ *  This method is used to add custom header
+ *
+ *  @param header            custom header added by user
+ *
+ */
+- (void)addCustomHeader:(NSDictionary *)header;
+
+
+/**
+ *  This method is used to return custom header
+ *
+ *  @return custom header
+ */
+- (NSDictionary *)customHeaders;
 
 /**
  *  This method is used to send GET request, not consider whether to write cache & not consider whether to load cache
@@ -173,157 +188,6 @@ NS_ASSUME_NONNULL_BEGIN
                 success:(MFSuccessBlock)successBlock
                 failure:(MFFailureBlock)failureBlock;
 
-
-/**
- *  This method is used to send PUT request,
- not consider whether to write cache & not consider whether to load cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendPutRequest:(NSString *)url
-            parameters:(id)parameters
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
-
-
-/**
- *  This method is used to send POST request,
- consider whether to load cache but not consider whether to write cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param loadCache           consider whether to load cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendPutRequest:(NSString *)url
-            parameters:(id)parameters
-             loadCache:(BOOL)loadCache
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
-
-
-
-/**
- *  This method is used to send POST request,
- consider whether to write cache but not consider whether to load cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendPutRequest:(NSString *)url
-            parameters:(id)parameters
-         cacheDuration:(NSTimeInterval)cacheDuration
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
-
-
-/**
- *  This method is used to send POST request,
- consider whether to load cache and consider whether to write cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param loadCache           consider whether to load cache
- *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendPutRequest:(NSString *)url
-            parameters:(id)parameters
-             loadCache:(BOOL)loadCache
-         cacheDuration:(NSTimeInterval)cacheDuration
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
-
-
-
-#pragma mark- Request API using DELETE method
-
-/**
- *  This method is used to send DELETE request,
- not consider whether to write cache & not consider whether to load cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendDeleteRequest:(NSString *)url
-               parameters:(id)parameters
-                  success:(MFSuccessBlock)successBlock
-                  failure:(MFFailureBlock)failureBlock;
-
-
-
-/**
- *  This method is used to send POST request,
- consider whether to load cache but not consider whether to write cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param loadCache           consider whether to load cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendDeleteRequest:(NSString *)url
-               parameters:(id)parameters
-                loadCache:(BOOL)loadCache
-                  success:(MFSuccessBlock)successBlock
-                  failure:(MFFailureBlock)failureBlock;
-
-
-
-/**
- *  This method is used to send POST request,
- consider whether to write cache but not consider whether to load cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendDeleteRequest:(NSString *)url
-               parameters:(id)parameters
-            cacheDuration:(NSTimeInterval)cacheDuration
-                  success:(MFSuccessBlock)successBlock
-                  failure:(MFFailureBlock)failureBlock;
-
-
-/**
- *  This method is used to send POST request,
- consider whether to load cache and consider whether to write cache
- *
- *  @param url                 request url
- *  @param parameters          parameters
- *  @param loadCache           consider whether to load cache
- *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
- *
- */
-- (void)sendDeleteRequest:(NSString *)url
-               parameters:(id)parameters
-                loadCache:(BOOL)loadCache
-            cacheDuration:(NSTimeInterval)cacheDuration
-                  success:(MFSuccessBlock)successBlock
-                  failure:(MFFailureBlock)failureBlock;
-
-
 /**
  *  This method is used to upload image
  *
@@ -342,9 +206,9 @@ NS_ASSUME_NONNULL_BEGIN
                          image:(UIImage *)image
                           name:(NSString *)name
                       mimeType:(NSString *)mimeType
-                      progress:(MFUploadProgressBlock _Nullable)uploadProgressBlock
-                       success:(MFUploadSuccessBlock _Nullable)uploadSuccessBlock
-                       failure:(MFUploadFailureBlock _Nullable)uploadFailureBlock;
+                      progress:(MFUploadProgressBlock)uploadProgressBlock
+                       success:(MFUploadSuccessBlock)uploadSuccessBlock
+                       failure:(MFUploadFailureBlock)uploadFailureBlock;
 
 
 /**
@@ -528,9 +392,6 @@ NS_ASSUME_NONNULL_BEGIN
                        progress:(MFUploadProgressBlock)uploadProgressBlock
                         success:(MFUploadSuccessBlock)uploadSuccessBlock
                         failure:(MFUploadFailureBlock)uploadFailureBlock;
-
-
-
 
 
 
@@ -713,77 +574,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  This method is used to cancel all current requests
  */
 - (void)cancelAllCurrentRequests;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @end

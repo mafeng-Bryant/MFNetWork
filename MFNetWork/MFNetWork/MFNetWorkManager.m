@@ -7,7 +7,391 @@
 //
 
 #import "MFNetWorkManager.h"
+#import "MFNetWorkRequestEngine.h"
+#import "MFRequestManager.h"
+
+@interface MFNetWorkManager()
+@property (nonatomic,strong) MFNetWorkRequestEngine* requestEngine;
+@property (nonatomic,strong) MFRequestManager* requestManager;
+
+
+@end
 
 @implementation MFNetWorkManager
+
++ (MFNetWorkManager *)sharedInstance
+{
+    static MFNetWorkManager *sharedManager = NULL;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [[MFNetWorkManager alloc] init];
+    });
+    return sharedManager;
+}
+
+- (void)addCustomHeader:(NSDictionary *)header
+{
+    
+}
+
+- (NSDictionary *)customHeaders
+{
+    return nil;
+}
+
+- (void)sendGetRequest:(NSString *)url
+               success:(MFSuccessBlock)successBlock
+               failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodGET
+                         parameters:nil
+                          loadCache:NO
+                      cacheDuration:0
+                            success:successBlock
+                            failure:failureBlock];
+    
+}
+
+- (void)sendGetRequest:(NSString *)url
+            parameters:(id)parameters
+               success:(MFSuccessBlock)successBlock
+               failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodGET
+                         parameters:parameters
+                          loadCache:NO
+                      cacheDuration:0
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+- (void)sendGetRequest:(NSString *)url
+            parameters:(id)parameters
+             loadCache:(BOOL)loadCache
+               success:(MFSuccessBlock)successBlock
+               failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodGET
+                         parameters:parameters
+                          loadCache:loadCache
+                      cacheDuration:0
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+- (void)sendGetRequest:(NSString *)url
+            parameters:(id)parameters
+         cacheDuration:(NSTimeInterval)cacheDuration
+               success:(MFSuccessBlock)successBlock
+               failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodGET
+                         parameters:parameters
+                          loadCache:NO
+                      cacheDuration:cacheDuration
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+- (void)sendGetRequest:(NSString *)url
+            parameters:(id)parameters
+             loadCache:(BOOL)loadCache
+         cacheDuration:(NSTimeInterval)cacheDuration
+               success:(MFSuccessBlock)successBlock
+               failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodGET
+                         parameters:parameters
+                          loadCache:loadCache
+                      cacheDuration:cacheDuration
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+
+- (void)sendPostRequest:(NSString *)url
+             parameters:(id)parameters
+                success:(MFSuccessBlock)successBlock
+                failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodPOST
+                         parameters:parameters
+                          loadCache:NO
+                      cacheDuration:0
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+
+
+- (void)sendPostRequest:(NSString *)url
+             parameters:(id)parameters
+              loadCache:(BOOL)loadCache
+                success:(MFSuccessBlock)successBlock
+                failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodPOST
+                         parameters:parameters
+                          loadCache:loadCache
+                      cacheDuration:0
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+- (void)sendPostRequest:(NSString *)url
+             parameters:(id)parameters
+          cacheDuration:(NSTimeInterval)cacheDuration
+                success:(MFSuccessBlock)successBlock
+                failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodPOST
+                         parameters:parameters
+                          loadCache:NO
+                      cacheDuration:cacheDuration
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+
+
+- (void)sendPostRequest:(NSString *)url
+             parameters:(id)parameters
+              loadCache:(BOOL)loadCache
+          cacheDuration:(NSTimeInterval)cacheDuration
+                success:(MFSuccessBlock)successBlock
+                failure:(MFFailureBlock)failureBlock
+{
+    [self.requestEngine sendRequest:url
+                             method:MFRequestMethodPOST
+                         parameters:parameters
+                          loadCache:loadCache
+                      cacheDuration:cacheDuration
+                            success:successBlock
+                            failure:failureBlock];
+}
+
+- (void)sendUploadImageRequest:(NSString *)url
+                    parameters:(id)parameters
+                         image:(UIImage *)image
+                          name:(NSString *)name
+                      mimeType:(NSString *)mimeType
+                      progress:(MFUploadProgressBlock)uploadProgressBlock
+                       success:(MFUploadSuccessBlock)uploadSuccessBlock
+                       failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendUploadImageRequest:(NSString *)url
+                 ignoreBaseUrl:(BOOL)ignoreBaseUrl
+                    parameters:(id)parameters
+                         image:(UIImage *)image
+                          name:(NSString *)name
+                      mimeType:(NSString *)mimeType
+                      progress:(MFUploadProgressBlock)uploadProgressBlock
+                       success:(MFUploadSuccessBlock)uploadSuccessBlock
+                       failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendUploadImagesRequest:(NSString *)url
+                     parameters:(id)parameters
+                         images:(NSArray<UIImage *> *)images
+                           name:(NSString *)name
+                       mimeType:(NSString *)mimeType
+                       progress:(MFUploadProgressBlock)uploadProgressBlock
+                        success:(MFUploadSuccessBlock)uploadSuccessBlock
+                        failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendUploadImagesRequest:(NSString *)url
+                  ignoreBaseUrl:(BOOL)ignoreBaseUrl
+                     parameters:(id)parameters
+                         images:(NSArray<UIImage *> *)images
+                           name:(NSString *)name
+                       mimeType:(NSString *)mimeType
+                       progress:(MFUploadProgressBlock)uploadProgressBlock
+                        success:(MFUploadSuccessBlock)uploadSuccessBlock
+                        failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendUploadImageRequest:(NSString *)url
+                    parameters:(id)parameters
+                         image:(UIImage *)image
+                 compressRatio:(float)compressRatio
+                          name:(NSString *)name
+                      mimeType:(NSString *)mimeType
+                      progress:(MFUploadProgressBlock)uploadProgressBlock
+                       success:(MFUploadSuccessBlock)uploadSuccessBlock
+                       failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendUploadImageRequest:(NSString *)url
+                 ignoreBaseUrl:(BOOL)ignoreBaseUrl
+                    parameters:(id)parameters
+                         image:(UIImage *)image
+                 compressRatio:(float)compressRatio
+                          name:(NSString *)name
+                      mimeType:(NSString *)mimeType
+                      progress:(MFUploadProgressBlock)uploadProgressBlock
+                       success:(MFUploadSuccessBlock)uploadSuccessBlock
+                       failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendUploadImagesRequest:(NSString *)url
+                     parameters:(id)parameters
+                         images:(NSArray<UIImage *> *)images
+                  compressRatio:(float)compressRatio
+                           name:(NSString *)name
+                       mimeType:(NSString *)mimeType
+                       progress:(MFUploadProgressBlock)uploadProgressBlock
+                        success:(MFUploadSuccessBlock)uploadSuccessBlock
+                        failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendUploadImagesRequest:(NSString *)url
+                  ignoreBaseUrl:(BOOL)ignoreBaseUrl
+                     parameters:(id)parameters
+                         images:(NSArray<UIImage *> *)images
+                  compressRatio:(float)compressRatio
+                           name:(NSString *)name
+                       mimeType:(NSString *)mimeType
+                       progress:(MFUploadProgressBlock)uploadProgressBlock
+                        success:(MFUploadSuccessBlock)uploadSuccessBlock
+                        failure:(MFUploadFailureBlock)uploadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+           downloadFilePath:(NSString *)downloadFilePath
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+              ignoreBaseUrl:(BOOL)ignoreBaseUrl
+           downloadFilePath:(NSString *)downloadFilePath
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+           downloadFilePath:(NSString *)downloadFilePath
+                  resumable:(BOOL)resumable
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+              ignoreBaseUrl:(BOOL)ignoreBaseUrl
+           downloadFilePath:(NSString *)downloadFilePath
+                  resumable:(BOOL)resumable
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+           downloadFilePath:(NSString *)downloadFilePath
+          backgroundSupport:(BOOL)backgroundSupport
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+              ignoreBaseUrl:(BOOL)ignoreBaseUrl
+           downloadFilePath:(NSString *)downloadFilePath
+          backgroundSupport:(BOOL)backgroundSupport
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+           downloadFilePath:(NSString *)downloadFilePath
+                  resumable:(BOOL)resumable
+          backgroundSupport:(BOOL)backgroundSupport
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)sendDownloadRequest:(NSString *)url
+              ignoreBaseUrl:(BOOL)ignoreBaseUrl
+           downloadFilePath:(NSString *)downloadFilePath
+                  resumable:(BOOL)resumable
+          backgroundSupport:(BOOL)backgroundSupport
+                   progress:(MFDownloadProgressBlock)downloadProgressBlock
+                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
+                    failure:(MFDownloadFailureBlock)downloadFailureBlock
+{
+    
+}
+
+- (void)cancelAllCurrentRequests
+{
+    [self.requestManager cancelAllCurrentRequests];
+}
+
+#pragma mark set and get method
+
+- (MFNetWorkRequestEngine *)requestEngine
+{    
+    if (!_requestEngine) {
+        _requestEngine = [[MFNetWorkRequestEngine alloc] init];
+    }
+    return _requestEngine;
+}
+
+- (MFRequestManager *)requestManager
+{
+    if (!_requestManager) {
+        _requestManager = [MFRequestManager sharedInstance];
+    }
+    return _requestManager;
+}
+
+-(void)dealloc
+{
+    [self cancelAllCurrentRequests];
+}
 
 @end

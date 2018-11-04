@@ -25,7 +25,7 @@
 @property (nonatomic, readwrite, copy)   NSString *requestUrl;
 
 //request method
-@property (nonatomic, readwrite, copy)   NSString *method;
+@property (nonatomic, readwrite)  MFRequestMethodType method;
 
 //response responseObject
 @property (nonatomic, readwrite, strong) id responseObject;
