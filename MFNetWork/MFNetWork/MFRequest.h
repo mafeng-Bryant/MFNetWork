@@ -143,7 +143,6 @@
                  successBlock:(MFSuccessBlock)successBlock
                  failureBlock:(MFFailureBlock)failureBlock;
 
-
 //request type
 - (MFRequestType)requestType;
 

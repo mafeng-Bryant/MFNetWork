@@ -7,8 +7,48 @@
 //
 
 #import "MFRequest+RequestExtension.h"
+#import "MFNetWorkingHelper.h"
+#import "objc/runtime.h"
+#import "MFApiStatusGenerator.h"
+
+//response key
+static NSString *const kResponseKeyContent          = @"content";
+
+static void *MFNetworkingApiStatus;
 
 @implementation MFRequest (RequestExtension)
 
+- (id)content{
+    if ([self.responseObject isKindOfClass:[NSDictionary class]]) {
+        return self.responseObject[kResponseKeyContent];
+    }
+    return nil;
+}
+
+-(MFApiStatus *)status
+{
+    id _status = objc_getAssociatedObject(self, &MFNetworkingApiStatus);
+    if (!_status) {
+        _status = [MFApiStatusGenerator generateApiStatusWithRequest:self];
+        self.status = _status;
+    }
+    return _status;
+}
+
+-(void)setStatus:(MFApiStatus *)status
+{
+    objc_setAssociatedObject(self, &MFNetworkingApiStatus, status, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+#pragma mark MFRequestInjector
+
+- (void)initInjector:(MFRequest *)request
+{
+    //加载各种reformer和interceptor
+    MFNetWorkingHelper *manager = [MFNetWorkingHelper sharedInstance];
+    request.requestReformer = manager;
+    request.responseReformer = manager;
+    request.interceptor = manager;
+}
 
 @end

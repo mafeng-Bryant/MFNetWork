@@ -12,16 +12,10 @@
 #import <AFNetworking/AFNetworking.h>
 #import "MFNetWorkingProtocol.h"
 
-#ifdef DEBUG
-#define MFLog(...) NSLog(@"%s line number:%d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
-#else
-#define MFLog(...)
-#endif
-
 //---------------------------------------normal request call block-----------------------------------------------------------------------//
 
-typedef void(^MFSuccessBlock)(id responseObject);
-typedef void(^MFFailureBlock)(NSURLSessionTask* task, NSError *error, NSInteger statusCode);
+typedef void(^MFSuccessBlock)(id responseObject, MFRequest* request);
+typedef void(^MFFailureBlock)(MFRequest* request, NSError *error);
 
 //---------------------------------------upload request call block-----------------------------------------------------------------------//
 

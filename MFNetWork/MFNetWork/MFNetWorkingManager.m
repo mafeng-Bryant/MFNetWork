@@ -9,6 +9,7 @@
 #import "MFNetWorkingManager.h"
 #import "MFNetWorkingRequestEngine.h"
 #import "MFNetWorkingRequestManager.h"
+#import "MFNetWorkingRequestCommonHeader.h"
 
 @interface MFNetWorkingManager()
 @property (nonatomic,strong) MFNetWorkingRequestEngine* requestEngine;
@@ -31,12 +32,12 @@
 
 - (void)addCustomHeader:(NSDictionary *)header
 {
-    
+    [[MFNetWorkingRequestCommonHeader sharedInstance] addCustomHeader:header];
 }
 
 - (NSDictionary *)customHeaders
 {
-    return nil;
+    return [MFNetWorkingRequestCommonHeader sharedInstance].customHeaders;
 }
 
 - (void)sendGetRequest:(NSString *)url

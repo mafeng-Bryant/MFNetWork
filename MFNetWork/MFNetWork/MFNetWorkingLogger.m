@@ -42,7 +42,7 @@
     [logString appendFormat:@"Http Header:\t%@\n", headers];
     [logString appendFormat:@"Params:\t\t%@\n", _params];
     [logString appendFormat:@"\n**************************************************************\n*                         Request End                        *\n**************************************************************\n\n"];
-    MFLog(@"%@",logString);
+    NSLog(@"%@",logString);
 }
 
 + (void)printResponse:(MFRequest *)request
@@ -65,7 +65,7 @@
         [logString appendFormat:@"Error Localized Recovery Suggestion:\t%@\n", error.localizedRecoverySuggestion];
     }
     [logString appendFormat:@"\n==============================================================\n=                        Response End                        =\n==============================================================\n\n"];
-    MFLog(@"%@",logString);
+    NSLog(@"%@",logString);
 }
 
 #pragma mark Private methord

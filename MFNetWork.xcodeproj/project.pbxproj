@@ -24,6 +24,9 @@
 		E253A5BA21898E5200CBC700 /* MFNetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5B921898E5200CBC700 /* MFNetWorkingManager.m */; };
 		E253A5BE2189B2EB00CBC700 /* MFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5BD2189B2EB00CBC700 /* MFRequest.m */; };
 		E253A5C42189DF0800CBC700 /* MFNetWorkingRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5C32189DF0800CBC700 /* MFNetWorkingRequestManager.m */; };
+		E2772F4E218FEF8400DCD680 /* MFNetWorkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F4D218FEF8400DCD680 /* MFNetWorkingHelper.m */; };
+		E2772F51218FF8B500DCD680 /* MFApiStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F50218FF8B500DCD680 /* MFApiStatus.m */; };
+		E2772F542190119F00DCD680 /* MFApiStatusGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F532190119F00DCD680 /* MFApiStatusGenerator.m */; };
 		EFD9729303AE9DEA5EFE1758 /* libPods-MFNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,12 @@
 		E253A5BD2189B2EB00CBC700 /* MFRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFRequest.m; sourceTree = "<group>"; };
 		E253A5C22189DF0800CBC700 /* MFNetWorkingRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestManager.h; sourceTree = "<group>"; };
 		E253A5C32189DF0800CBC700 /* MFNetWorkingRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestManager.m; sourceTree = "<group>"; };
+		E2772F4C218FEF8400DCD680 /* MFNetWorkingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingHelper.h; sourceTree = "<group>"; };
+		E2772F4D218FEF8400DCD680 /* MFNetWorkingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingHelper.m; sourceTree = "<group>"; };
+		E2772F4F218FF8B500DCD680 /* MFApiStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFApiStatus.h; sourceTree = "<group>"; };
+		E2772F50218FF8B500DCD680 /* MFApiStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFApiStatus.m; sourceTree = "<group>"; };
+		E2772F522190119F00DCD680 /* MFApiStatusGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFApiStatusGenerator.h; sourceTree = "<group>"; };
+		E2772F532190119F00DCD680 /* MFApiStatusGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFApiStatusGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +211,12 @@
 				C681B501218EB66600ACFE0B /* MFNetWorkingConfig.m */,
 				C681B506218F325400ACFE0B /* MFNetWorkingLogger.h */,
 				C681B507218F325400ACFE0B /* MFNetWorkingLogger.m */,
+				E2772F4C218FEF8400DCD680 /* MFNetWorkingHelper.h */,
+				E2772F4D218FEF8400DCD680 /* MFNetWorkingHelper.m */,
+				E2772F4F218FF8B500DCD680 /* MFApiStatus.h */,
+				E2772F50218FF8B500DCD680 /* MFApiStatus.m */,
+				E2772F522190119F00DCD680 /* MFApiStatusGenerator.h */,
+				E2772F532190119F00DCD680 /* MFApiStatusGenerator.m */,
 			);
 			path = MFNetWork;
 			sourceTree = "<group>";
@@ -368,9 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C681B50B218F40C300ACFE0B /* MFRequest+RequestExtension.m in Sources */,
+				E2772F542190119F00DCD680 /* MFApiStatusGenerator.m in Sources */,
 				E253A5B421898CEC00CBC700 /* ViewController.m in Sources */,
 				E253A5BA21898E5200CBC700 /* MFNetWorkingManager.m in Sources */,
 				E253A5BE2189B2EB00CBC700 /* MFRequest.m in Sources */,
+				E2772F4E218FEF8400DCD680 /* MFNetWorkingHelper.m in Sources */,
 				C681B4F9218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.m in Sources */,
 				C681B4FF218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.m in Sources */,
 				C681B508218F325400ACFE0B /* MFNetWorkingLogger.m in Sources */,
@@ -379,6 +396,7 @@
 				C681B502218EB66600ACFE0B /* MFNetWorkingConfig.m in Sources */,
 				E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */,
 				C681B4FC218E8D5600ACFE0B /* MFNetWorkingRequestEngine.m in Sources */,
+				E2772F51218FF8B500DCD680 /* MFApiStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

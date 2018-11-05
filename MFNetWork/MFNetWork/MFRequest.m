@@ -40,7 +40,6 @@
         _cacheDuration = cacheDuration;
         _successBlock = successBlock;
         _failureBlock = failureBlock;
-        
     }
     return self;
 }

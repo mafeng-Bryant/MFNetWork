@@ -82,10 +82,10 @@ static char currentRequestKey;
 {
     NSArray* allkeys = [self.currentRequest allKeys];
     if (allkeys.count>0) {
-        MFLog(@"remaining current request");
+        NSLog(@"remaining current request");
         return YES;
     }
-    MFLog(@"no remaining current request");
+    NSLog(@"no remaining current request");
     return NO;
 }
 
@@ -102,7 +102,7 @@ static char currentRequestKey;
 {
     if ([self remainingCurrentRequests]) {
        [self.currentRequest enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, MFRequest * _Nonnull obj, BOOL * _Nonnull stop) {
-           MFLog(@"===========Log Current rquest:\n %@",obj);
+           NSLog(@"===========Log Current rquest:\n %@",obj);
         }];
     }
 }
@@ -134,7 +134,7 @@ static char currentRequestKey;
     }];
     
     if (cancelRequestModels.count == 0) {
-        MFLog(@"no request to be cancel");
+        NSLog(@"no request to be cancel");
     }else {
         
         [cancelRequestModels enumerateObjectsUsingBlock:^(MFRequest*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -168,6 +168,9 @@ static char currentRequestKey;
     
 }
 
++ (BOOL)isConnected{
+    return [AFNetworkReachabilityManager sharedManager].reachable;
+}
 
 #pragma amrk MFNetworkProtocol
 
@@ -179,7 +182,7 @@ static char currentRequestKey;
 
 - (void)handleRequesFailure:(MFRequest *)requestModel
 {
-    MFLog(@"retain request");
+    NSLog(@"retain request");
 }
 
 @end

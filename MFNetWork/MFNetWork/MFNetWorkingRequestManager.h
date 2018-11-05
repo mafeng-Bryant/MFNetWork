@@ -99,6 +99,13 @@ typedef NSMutableDictionary<NSString*, MFRequest*> MFCurrentRequestModels;
                              method:(NSString *)method
                          parameters:(id)parameters;
 
+/**
+ *  是否有网络连接
+ *
+ *  @return BOOL
+ */
++ (BOOL)isConnected;
+
 
 
 @end

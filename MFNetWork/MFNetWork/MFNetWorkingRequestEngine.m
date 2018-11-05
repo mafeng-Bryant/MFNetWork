@@ -81,41 +81,46 @@
     //set request timeout
     _sessionManager.requestSerializer.timeoutInterval = [MFNetWorkingConfig sharedInstance].timeoutInterval;
     
+    //create request
+    MFRequest* request = [self createRequest:url method:method parameters:parameters loadCache:loadCache cacheDuration:cacheDuration successBlock:successBlock failureBlock:failureBlock];
+    
     __block id param = nil;
     __block NSDictionary *headers = nil;
-   //对请求的header和paramers参数做处理
-    [[MFNetWorkingRequestCommonHeader sharedInstance] requestReformerWithHeaders:[MFNetWorkingRequestCommonHeader sharedInstance].customHeaders parameters:parameters finished:^(id newHeaders, id newParameters) {
-        param = newParameters;
-        headers = newHeaders;
-    }];
+    if (request.requestReformer && [request.requestReformer respondsToSelector:@selector(requestReformerWithHeaders:parameters:finished:)]) {
+        [request.requestReformer requestReformerWithHeaders:[MFNetWorkingRequestCommonHeader sharedInstance].customHeaders parameters:parameters finished:^(id newHeaders, id newParameters) {
+            param = newParameters;
+            headers = newHeaders;
+         }];
+    }
     
     //add custom headers
-    [self addCustomHeaders];
+    [self addCustomHeaders:headers];
     
+
+    //start request flow
     if (loadCache) {
        
         
         
         
+        
     }else  {
         
-        [self starRequestWithCompleteUrl:completeUrl method:method parameters:param loadCache:loadCache cacheDuration:cacheDuration success:successBlock failure:failureBlock];
+        [self starRequest:request completeUrl:completeUrl method:method parameters:param loadCache:loadCache cacheDuration:cacheDuration success:successBlock failure:failureBlock];
     }
 
 }
 
-- (void)starRequestWithCompleteUrl:(NSString*)url
-                            method:(MFRequestMethodType)method
-                        parameters:(id)parameters
-                         loadCache:(BOOL)loadCache
-                     cacheDuration:(NSTimeInterval)cacheDuration
-                           success:(MFSuccessBlock)successBlock
-                           failure:(MFFailureBlock)failureBlock
+- (void)starRequest:(MFRequest*)request
+        completeUrl:(NSString*)url
+             method:(MFRequestMethodType)method
+         parameters:(id)parameters
+          loadCache:(BOOL)loadCache
+      cacheDuration:(NSTimeInterval)cacheDuration
+            success:(MFSuccessBlock)successBlock
+            failure:(MFFailureBlock)failureBlock
 {
     
-    //create request model
-    MFRequest* request = [[MFRequest alloc]initRequestUrl:url method:method parameters:parameters loadCache:loadCache
-                                            cacheDuration:cacheDuration successBlock:successBlock failureBlock:failureBlock];
     if (method == MFRequestMethodGET) {
         
         request.task = [_sessionManager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -155,14 +160,27 @@
     MFRequest *request = [self getRequest:key];
     if (request) {
         request.error = error;
+        
+        //reform response
+        if (request.responseReformer && [request.responseReformer respondsToSelector:@selector(responseReormer:)]) {
+            request.responseObject = responseObject;
+            [request.responseReformer responseReormer:request];
+        }
+        
+        //intercept
+        if (request.interceptor && [request.interceptor respondsToSelector:@selector(interceptResponse:)]) {
+            request.responseObject = responseObject;
+            [request.interceptor interceptResponse:request];
+        }
+        
         if (!error) {
             request.responseObject = responseObject;
             if (request.successBlock) {
-                request.successBlock(responseObject);
+                request.successBlock(responseObject, request);
             }
         }else {
             if (request.failureBlock) {
-                request.failureBlock(request.task, error, error.code);
+                request.failureBlock(request,error);
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -198,9 +216,8 @@
     return key;
 }
 
-- (void)addCustomHeaders
+- (void)addCustomHeaders:(NSDictionary*)headers
 {
-    NSDictionary* headers = [MFNetWorkingRequestCommonHeader sharedInstance].customHeaders;
     if ([headers allKeys].count>0) {
         [headers enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
             if ([key isKindOfClass:[NSString class]] && [value isKindOfClass:[NSString class]]) {
@@ -208,6 +225,17 @@
             }
         }];
     }
+}
+
+- (MFRequest*)createRequest:(NSString*)url
+                     method:(MFRequestMethodType)method
+                 parameters:(id)parameters
+                  loadCache:(BOOL)loadCache
+              cacheDuration:(NSTimeInterval)cacheDuration
+               successBlock:(MFSuccessBlock)successBlock
+               failureBlock:(MFFailureBlock)failureBlock
+{
+    return [[MFRequest alloc]initRequestUrl:url method:method parameters:parameters loadCache:loadCache cacheDuration:cacheDuration successBlock:successBlock failureBlock:failureBlock];
 }
 
 - (NSString*)buildReuestUrl:(NSString*)url

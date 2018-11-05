@@ -7,10 +7,11 @@
 //
 
 #import "MFRequest.h"
+#import "MFApiStatus.h"
 
 @interface MFRequest (RequestExtension)<MFRequestInjector>
-
 @property (nonatomic, strong, readonly) id content; //kResponseKeyContent 内容
+@property (nonatomic,strong) MFApiStatus* status;
 
 @end
 
