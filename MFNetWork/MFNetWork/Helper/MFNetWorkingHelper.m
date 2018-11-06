@@ -8,7 +8,7 @@
 
 #import "MFNetWorkingHelper.h"
 #import "MFNetWorkingConfig.h"
-#import "MFNetWorkingRequestCommonHeader.h"
+#import "MFNetWorkingRequestCommonParameterHeader.h"
 #import "MFNetWorkingRequestManager.h"
 
 @implementation MFNetWorkingHelper
@@ -44,7 +44,7 @@
                           finished:(void(^)(id newHeaders,id newParameters))result
 {
     //reformer parameters
-    NSDictionary *commonParameters = [MFNetWorkingRequestCommonHeader commonHeaders];
+    NSDictionary *commonParameters = [MFNetWorkingRequestCommonParameterHeader commonHeaders];
     NSDictionary *requestParameters = parameters;
     NSMutableDictionary *allParameters = [NSMutableDictionary dictionaryWithDictionary:commonParameters];
     if ([requestParameters isKindOfClass:[NSDictionary class]]) {
@@ -53,7 +53,7 @@
     
     NSDictionary *finalParameters = @{@"p":[self toJsonString:allParameters]};
     //reformer headers
-    NSDictionary *commonHeaders = [MFNetWorkingRequestCommonHeader commonParameters];
+    NSDictionary *commonHeaders = [MFNetWorkingRequestCommonParameterHeader commonParameters];
     NSMutableDictionary *finalHeaders = [NSMutableDictionary dictionaryWithDictionary:commonHeaders];
     //NSString *sign =  [PPSignatureGenerator generateSignatureWithParameters:allParameters];
     //finalHeaders[@"sign"] = sign;
