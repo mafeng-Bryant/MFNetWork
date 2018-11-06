@@ -10,25 +10,6 @@
 
 @class MFRequest;
 
-@protocol MFNetWorkingProtocol <NSObject>
-
-@required
-
-/**
- *  This method is used to deal with the request model when the corresponding request is finished
- *
- */
-- (void)handleRequesFinished:(MFRequest *)requestModel;
-
-/**
- *  This method is used to deal with the request model when the corresponding request is failure
- *
- */
-- (void)handleRequesFailure:(MFRequest *)requestModel;
-
-
-@end
-
 //注入器：初始化时，通过这个协议可以实现统一注入
 @protocol MFRequestInjector <NSObject>
 
@@ -65,4 +46,5 @@
 - (void)responseReormer:(MFRequest *)request;
 
 @end
+
 

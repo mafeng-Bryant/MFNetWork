@@ -11,10 +11,10 @@
 @class MFRequest;
 
 @interface MFNetWorkingRequestBaseEngine : NSObject
-
-- (void)addCustomHeaders;
+@property (nonatomic,strong) AFHTTPSessionManager* sessionManager;
 
 - (void)requestDidSuccessWithRequest:(MFRequest*)request;
 
 @end
+
 

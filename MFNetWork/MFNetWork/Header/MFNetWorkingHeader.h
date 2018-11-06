@@ -13,21 +13,14 @@
 #import "MFNetWorkingProtocol.h"
 
 //---------------------------------------normal request call block-----------------------------------------------------------------------//
-
-typedef void(^MFSuccessBlock)(id responseObject, MFRequest* request);
-typedef void(^MFFailureBlock)(MFRequest* request, NSError *error);
+typedef void (^MFRequestCompletionHandler)(id result,MFRequest *request,NSError *error);
 
 //---------------------------------------upload request call block-----------------------------------------------------------------------//
-
 typedef void(^MFUploadSuccessBlock)(id responseObject);
 typedef void(^MFUploadProgressBlock)(NSProgress *uploadProgress);
 typedef void(^MFUploadFailureBlock)(NSURLSessionTask *task, NSError *error, NSInteger statusCode, NSArray<UIImage *>*uploadFailedImages);
 
 //---------------------------------------download request call block-----------------------------------------------------------------------//
-
-typedef void(^MFDownloadSuccessBlock)(id responseObject);
-typedef void(^MFDownloadProgressBlock)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress);
-typedef void(^MFDownloadFailureBlock)(NSURLSessionTask *task, NSError *error, NSString* resumableDataPath);
 
 
 /**
@@ -74,3 +67,4 @@ static NSString *const MFRequestMethodPut     = @"PUT";
 static NSString *const MFRequestMethodDelete  = @"DELETE";
 
 #endif /* MFNetWorkHeader_h */
+

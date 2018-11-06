@@ -20,8 +20,7 @@
  *  @param parameters         parameters
  *  @param loadCache          consider whether to load cache
  *  @param cacheDuration      consider whether to write cache
- *  @param successBlock       success callback
- *  @param failureBlock       failure callback
+ *  @param handler            handler callback
  *
  */
 - (void)sendRequest:(NSString *)url
@@ -29,8 +28,7 @@
          parameters:(id)parameters
           loadCache:(BOOL)loadCache
       cacheDuration:(NSTimeInterval)cacheDuration
-            success:(MFSuccessBlock)successBlock
-            failure:(MFFailureBlock)failureBlock;
+            handler:(MFRequestCompletionHandler)handler;
 
 
 @end

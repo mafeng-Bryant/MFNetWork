@@ -28,18 +28,16 @@
                    parameters:(id)parameters
                     loadCache:(BOOL)loadCache
                 cacheDuration:(NSTimeInterval)cacheDuration
-                 successBlock:(MFSuccessBlock)successBlock
-                 failureBlock:(MFFailureBlock)failureBlock
+                      handler:(MFRequestCompletionHandler)handler
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         _requestUrl = url;
         _method = method;
         _parameters = parameters;
         _loadCache = loadCache;
         _cacheDuration = cacheDuration;
-        _successBlock = successBlock;
-        _failureBlock = failureBlock;
+        _completionHandler = handler;
     }
     return self;
 }
@@ -62,9 +60,7 @@
 
 - (MFRequestType)requestType
 {
-    if (self.downloadFilePath) {
-        return MFRequestTypeDownload;
-    }else if (self.uploadUrl){
+    if (self.uploadUrl !=nil){
         return MFRequestTypeUpload;
     }
     return MFRequestTypeNormal;
@@ -92,14 +88,11 @@
 
 - (void)clearAllBlocks
 {
-    _successBlock  = nil;
-    _failureBlock = nil;
+    _completionHandler = nil;
     _uploadProgressBlock = nil;
     _uploadSuccessBlock = nil;
     _uploadFailedBlock = nil;
-    _downloadSuccessBlock = nil;
-    _downloadProgressBlock = nil;
-    _downloadFailureBlock = nil;
 }
 
 @end
+

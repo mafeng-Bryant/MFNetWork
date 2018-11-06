@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C681B4F9218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B4F8218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.m */; };
-		C681B4FC218E8D5600ACFE0B /* MFNetWorkingRequestEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B4FB218E8D5600ACFE0B /* MFNetWorkingRequestEngine.m */; };
-		C681B4FF218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B4FE218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.m */; };
 		C681B502218EB66600ACFE0B /* MFNetWorkingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B501218EB66600ACFE0B /* MFNetWorkingConfig.m */; };
-		C681B508218F325400ACFE0B /* MFNetWorkingLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B507218F325400ACFE0B /* MFNetWorkingLogger.m */; };
-		C681B50B218F40C300ACFE0B /* MFRequest+RequestExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C681B50A218F40C300ACFE0B /* MFRequest+RequestExtension.m */; };
 		E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A57E2189897F00CBC700 /* AppDelegate.m */; };
 		E253A5872189898000CBC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E253A5862189898000CBC700 /* Assets.xcassets */; };
 		E253A58A2189898000CBC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E253A5882189898000CBC700 /* LaunchScreen.storyboard */; };
@@ -21,12 +16,17 @@
 		E253A5A22189898000CBC700 /* MFNetWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5A12189898000CBC700 /* MFNetWorkUITests.m */; };
 		E253A5B421898CEC00CBC700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5B221898CEC00CBC700 /* ViewController.m */; };
 		E253A5B521898CEC00CBC700 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253A5B321898CEC00CBC700 /* ViewController.xib */; };
-		E253A5BA21898E5200CBC700 /* MFNetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5B921898E5200CBC700 /* MFNetWorkingManager.m */; };
 		E253A5BE2189B2EB00CBC700 /* MFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5BD2189B2EB00CBC700 /* MFRequest.m */; };
-		E253A5C42189DF0800CBC700 /* MFNetWorkingRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E253A5C32189DF0800CBC700 /* MFNetWorkingRequestManager.m */; };
-		E2772F4E218FEF8400DCD680 /* MFNetWorkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F4D218FEF8400DCD680 /* MFNetWorkingHelper.m */; };
-		E2772F51218FF8B500DCD680 /* MFApiStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F50218FF8B500DCD680 /* MFApiStatus.m */; };
-		E2772F542190119F00DCD680 /* MFApiStatusGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F532190119F00DCD680 /* MFApiStatusGenerator.m */; };
+		E253B460219153B4005325A9 /* MFNetWorkingRequestCommonParameterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E253B45F219153B4005325A9 /* MFNetWorkingRequestCommonParameterHeader.m */; };
+		E2772F8221901E9F00DCD680 /* MFApiStatusGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F7F21901E9F00DCD680 /* MFApiStatusGenerator.m */; };
+		E2772F8321901E9F00DCD680 /* MFApiStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F8021901E9F00DCD680 /* MFApiStatus.m */; };
+		E2772F8721901EA400DCD680 /* MFNetWorkingLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F8621901EA400DCD680 /* MFNetWorkingLogger.m */; };
+		E2772F8B21901EA900DCD680 /* MFNetWorkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F8921901EA900DCD680 /* MFNetWorkingHelper.m */; };
+		E2772F9621901EB600DCD680 /* MFNetWorkingRequestBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F9221901EB600DCD680 /* MFNetWorkingRequestBaseEngine.m */; };
+		E2772F9721901EB600DCD680 /* MFNetWorkingRequestEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F9321901EB600DCD680 /* MFNetWorkingRequestEngine.m */; };
+		E2772F9B21901EBD00DCD680 /* MFRequest+RequestExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F9921901EBD00DCD680 /* MFRequest+RequestExtension.m */; };
+		E2772FA121901ED000DCD680 /* MFNetWorkingRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772F9E21901ED000DCD680 /* MFNetWorkingRequestManager.m */; };
+		E2772FA221901ED000DCD680 /* MFNetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2772FA021901ED000DCD680 /* MFNetWorkingManager.m */; };
 		EFD9729303AE9DEA5EFE1758 /* libPods-MFNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */; };
 /* End PBXBuildFile section */
 
@@ -51,19 +51,8 @@
 		0D430FAF63C8A46A72C3EF99 /* Pods-MFNetWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFNetWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-MFNetWork/Pods-MFNetWork.release.xcconfig"; sourceTree = "<group>"; };
 		48D52D0EE120D6E117E58AC1 /* Pods-MFNetWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFNetWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MFNetWork/Pods-MFNetWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B557EFE9CE49D74A739E2591 /* libPods-MFNetWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MFNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C630873B218A023C0014CED6 /* MFNetWorkingProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingProtocol.h; sourceTree = "<group>"; };
-		C681B4F7218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestBaseEngine.h; sourceTree = "<group>"; };
-		C681B4F8218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestBaseEngine.m; sourceTree = "<group>"; };
-		C681B4FA218E8D5600ACFE0B /* MFNetWorkingRequestEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestEngine.h; sourceTree = "<group>"; };
-		C681B4FB218E8D5600ACFE0B /* MFNetWorkingRequestEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestEngine.m; sourceTree = "<group>"; };
-		C681B4FD218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestCommonHeader.h; sourceTree = "<group>"; };
-		C681B4FE218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestCommonHeader.m; sourceTree = "<group>"; };
 		C681B500218EB66600ACFE0B /* MFNetWorkingConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingConfig.h; sourceTree = "<group>"; };
 		C681B501218EB66600ACFE0B /* MFNetWorkingConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingConfig.m; sourceTree = "<group>"; };
-		C681B506218F325400ACFE0B /* MFNetWorkingLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingLogger.h; sourceTree = "<group>"; };
-		C681B507218F325400ACFE0B /* MFNetWorkingLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingLogger.m; sourceTree = "<group>"; };
-		C681B509218F40C300ACFE0B /* MFRequest+RequestExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFRequest+RequestExtension.h"; sourceTree = "<group>"; };
-		C681B50A218F40C300ACFE0B /* MFRequest+RequestExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MFRequest+RequestExtension.m"; sourceTree = "<group>"; };
 		E253A57A2189897F00CBC700 /* MFNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A57D2189897F00CBC700 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E253A57E2189897F00CBC700 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,19 +70,30 @@
 		E253A5B221898CEC00CBC700 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E253A5B321898CEC00CBC700 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		E253A5B721898D7800CBC700 /* MFNetWorking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorking.h; sourceTree = "<group>"; };
-		E253A5B821898E5200CBC700 /* MFNetWorkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingManager.h; sourceTree = "<group>"; };
-		E253A5B921898E5200CBC700 /* MFNetWorkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingManager.m; sourceTree = "<group>"; };
-		E253A5BB218991E000CBC700 /* MFNetWorkingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingHeader.h; sourceTree = "<group>"; };
 		E253A5BC2189B2EB00CBC700 /* MFRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFRequest.h; sourceTree = "<group>"; };
 		E253A5BD2189B2EB00CBC700 /* MFRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFRequest.m; sourceTree = "<group>"; };
-		E253A5C22189DF0800CBC700 /* MFNetWorkingRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestManager.h; sourceTree = "<group>"; };
-		E253A5C32189DF0800CBC700 /* MFNetWorkingRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestManager.m; sourceTree = "<group>"; };
-		E2772F4C218FEF8400DCD680 /* MFNetWorkingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingHelper.h; sourceTree = "<group>"; };
-		E2772F4D218FEF8400DCD680 /* MFNetWorkingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingHelper.m; sourceTree = "<group>"; };
-		E2772F4F218FF8B500DCD680 /* MFApiStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFApiStatus.h; sourceTree = "<group>"; };
-		E2772F50218FF8B500DCD680 /* MFApiStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFApiStatus.m; sourceTree = "<group>"; };
-		E2772F522190119F00DCD680 /* MFApiStatusGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFApiStatusGenerator.h; sourceTree = "<group>"; };
-		E2772F532190119F00DCD680 /* MFApiStatusGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFApiStatusGenerator.m; sourceTree = "<group>"; };
+		E253B45E219153B4005325A9 /* MFNetWorkingRequestCommonParameterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestCommonParameterHeader.h; sourceTree = "<group>"; };
+		E253B45F219153B4005325A9 /* MFNetWorkingRequestCommonParameterHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestCommonParameterHeader.m; sourceTree = "<group>"; };
+		E2772F7E21901E9F00DCD680 /* MFApiStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFApiStatus.h; sourceTree = "<group>"; };
+		E2772F7F21901E9F00DCD680 /* MFApiStatusGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFApiStatusGenerator.m; sourceTree = "<group>"; };
+		E2772F8021901E9F00DCD680 /* MFApiStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFApiStatus.m; sourceTree = "<group>"; };
+		E2772F8121901E9F00DCD680 /* MFApiStatusGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFApiStatusGenerator.h; sourceTree = "<group>"; };
+		E2772F8521901EA400DCD680 /* MFNetWorkingLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingLogger.h; sourceTree = "<group>"; };
+		E2772F8621901EA400DCD680 /* MFNetWorkingLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingLogger.m; sourceTree = "<group>"; };
+		E2772F8921901EA900DCD680 /* MFNetWorkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingHelper.m; sourceTree = "<group>"; };
+		E2772F8A21901EA900DCD680 /* MFNetWorkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingHelper.h; sourceTree = "<group>"; };
+		E2772F8E21901EB100DCD680 /* MFNetWorkingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingHeader.h; sourceTree = "<group>"; };
+		E2772F9221901EB600DCD680 /* MFNetWorkingRequestBaseEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestBaseEngine.m; sourceTree = "<group>"; };
+		E2772F9321901EB600DCD680 /* MFNetWorkingRequestEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestEngine.m; sourceTree = "<group>"; };
+		E2772F9421901EB600DCD680 /* MFNetWorkingRequestEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestEngine.h; sourceTree = "<group>"; };
+		E2772F9521901EB600DCD680 /* MFNetWorkingRequestBaseEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestBaseEngine.h; sourceTree = "<group>"; };
+		E2772F9921901EBD00DCD680 /* MFRequest+RequestExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFRequest+RequestExtension.m"; sourceTree = "<group>"; };
+		E2772F9A21901EBD00DCD680 /* MFRequest+RequestExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFRequest+RequestExtension.h"; sourceTree = "<group>"; };
+		E2772F9D21901ED000DCD680 /* MFNetWorkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingManager.h; sourceTree = "<group>"; };
+		E2772F9E21901ED000DCD680 /* MFNetWorkingRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingRequestManager.m; sourceTree = "<group>"; };
+		E2772F9F21901ED000DCD680 /* MFNetWorkingRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingRequestManager.h; sourceTree = "<group>"; };
+		E2772FA021901ED000DCD680 /* MFNetWorkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFNetWorkingManager.m; sourceTree = "<group>"; };
+		E2772FA421901ED600DCD680 /* MFNetWorkingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNetWorkingProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,35 +190,99 @@
 		E253A5B621898D5500CBC700 /* MFNetWork */ = {
 			isa = PBXGroup;
 			children = (
-				E253A5B721898D7800CBC700 /* MFNetWorking.h */,
-				E253A5BB218991E000CBC700 /* MFNetWorkingHeader.h */,
-				C630873B218A023C0014CED6 /* MFNetWorkingProtocol.h */,
-				E253A5B821898E5200CBC700 /* MFNetWorkingManager.h */,
-				E253A5B921898E5200CBC700 /* MFNetWorkingManager.m */,
+				E2772FA321901ED600DCD680 /* Prococol */,
+				E2772F9C21901ED000DCD680 /* Manager */,
+				E2772F9821901EBD00DCD680 /* Category */,
+				E2772F9121901EB600DCD680 /* Engine */,
+				E2772F8C21901EB100DCD680 /* Header */,
+				E2772F8821901EA900DCD680 /* Helper */,
+				E2772F8421901EA400DCD680 /* Logger */,
+				E2772F7D21901E9F00DCD680 /* ApiStatus */,
 				E253A5BC2189B2EB00CBC700 /* MFRequest.h */,
 				E253A5BD2189B2EB00CBC700 /* MFRequest.m */,
-				C681B509218F40C300ACFE0B /* MFRequest+RequestExtension.h */,
-				C681B50A218F40C300ACFE0B /* MFRequest+RequestExtension.m */,
-				E253A5C22189DF0800CBC700 /* MFNetWorkingRequestManager.h */,
-				E253A5C32189DF0800CBC700 /* MFNetWorkingRequestManager.m */,
-				C681B4F7218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.h */,
-				C681B4F8218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.m */,
-				C681B4FA218E8D5600ACFE0B /* MFNetWorkingRequestEngine.h */,
-				C681B4FB218E8D5600ACFE0B /* MFNetWorkingRequestEngine.m */,
-				C681B4FD218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.h */,
-				C681B4FE218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.m */,
+				E253A5B721898D7800CBC700 /* MFNetWorking.h */,
 				C681B500218EB66600ACFE0B /* MFNetWorkingConfig.h */,
 				C681B501218EB66600ACFE0B /* MFNetWorkingConfig.m */,
-				C681B506218F325400ACFE0B /* MFNetWorkingLogger.h */,
-				C681B507218F325400ACFE0B /* MFNetWorkingLogger.m */,
-				E2772F4C218FEF8400DCD680 /* MFNetWorkingHelper.h */,
-				E2772F4D218FEF8400DCD680 /* MFNetWorkingHelper.m */,
-				E2772F4F218FF8B500DCD680 /* MFApiStatus.h */,
-				E2772F50218FF8B500DCD680 /* MFApiStatus.m */,
-				E2772F522190119F00DCD680 /* MFApiStatusGenerator.h */,
-				E2772F532190119F00DCD680 /* MFApiStatusGenerator.m */,
 			);
 			path = MFNetWork;
+			sourceTree = "<group>";
+		};
+		E2772F7D21901E9F00DCD680 /* ApiStatus */ = {
+			isa = PBXGroup;
+			children = (
+				E2772F7E21901E9F00DCD680 /* MFApiStatus.h */,
+				E2772F8021901E9F00DCD680 /* MFApiStatus.m */,
+				E2772F8121901E9F00DCD680 /* MFApiStatusGenerator.h */,
+				E2772F7F21901E9F00DCD680 /* MFApiStatusGenerator.m */,
+			);
+			path = ApiStatus;
+			sourceTree = "<group>";
+		};
+		E2772F8421901EA400DCD680 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				E2772F8521901EA400DCD680 /* MFNetWorkingLogger.h */,
+				E2772F8621901EA400DCD680 /* MFNetWorkingLogger.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		E2772F8821901EA900DCD680 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E2772F8A21901EA900DCD680 /* MFNetWorkingHelper.h */,
+				E2772F8921901EA900DCD680 /* MFNetWorkingHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E2772F8C21901EB100DCD680 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				E2772F8E21901EB100DCD680 /* MFNetWorkingHeader.h */,
+				E253B45E219153B4005325A9 /* MFNetWorkingRequestCommonParameterHeader.h */,
+				E253B45F219153B4005325A9 /* MFNetWorkingRequestCommonParameterHeader.m */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		E2772F9121901EB600DCD680 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				E2772F9521901EB600DCD680 /* MFNetWorkingRequestBaseEngine.h */,
+				E2772F9221901EB600DCD680 /* MFNetWorkingRequestBaseEngine.m */,
+				E2772F9421901EB600DCD680 /* MFNetWorkingRequestEngine.h */,
+				E2772F9321901EB600DCD680 /* MFNetWorkingRequestEngine.m */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		E2772F9821901EBD00DCD680 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E2772F9A21901EBD00DCD680 /* MFRequest+RequestExtension.h */,
+				E2772F9921901EBD00DCD680 /* MFRequest+RequestExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E2772F9C21901ED000DCD680 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E2772F9D21901ED000DCD680 /* MFNetWorkingManager.h */,
+				E2772FA021901ED000DCD680 /* MFNetWorkingManager.m */,
+				E2772F9F21901ED000DCD680 /* MFNetWorkingRequestManager.h */,
+				E2772F9E21901ED000DCD680 /* MFNetWorkingRequestManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E2772FA321901ED600DCD680 /* Prococol */ = {
+			isa = PBXGroup;
+			children = (
+				E2772FA421901ED600DCD680 /* MFNetWorkingProtocol.h */,
+			);
+			path = Prococol;
 			sourceTree = "<group>";
 		};
 		F29F51242799347C4300A937 /* Pods */ = {
@@ -382,21 +446,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C681B50B218F40C300ACFE0B /* MFRequest+RequestExtension.m in Sources */,
-				E2772F542190119F00DCD680 /* MFApiStatusGenerator.m in Sources */,
+				E2772F9721901EB600DCD680 /* MFNetWorkingRequestEngine.m in Sources */,
 				E253A5B421898CEC00CBC700 /* ViewController.m in Sources */,
-				E253A5BA21898E5200CBC700 /* MFNetWorkingManager.m in Sources */,
+				E2772F8221901E9F00DCD680 /* MFApiStatusGenerator.m in Sources */,
+				E2772FA221901ED000DCD680 /* MFNetWorkingManager.m in Sources */,
+				E2772F8721901EA400DCD680 /* MFNetWorkingLogger.m in Sources */,
 				E253A5BE2189B2EB00CBC700 /* MFRequest.m in Sources */,
-				E2772F4E218FEF8400DCD680 /* MFNetWorkingHelper.m in Sources */,
-				C681B4F9218E8BCA00ACFE0B /* MFNetWorkingRequestBaseEngine.m in Sources */,
-				C681B4FF218E9E5600ACFE0B /* MFNetWorkingRequestCommonHeader.m in Sources */,
-				C681B508218F325400ACFE0B /* MFNetWorkingLogger.m in Sources */,
 				E253A58D2189898000CBC700 /* main.m in Sources */,
-				E253A5C42189DF0800CBC700 /* MFNetWorkingRequestManager.m in Sources */,
+				E2772F8B21901EA900DCD680 /* MFNetWorkingHelper.m in Sources */,
 				C681B502218EB66600ACFE0B /* MFNetWorkingConfig.m in Sources */,
 				E253A57F2189897F00CBC700 /* AppDelegate.m in Sources */,
-				C681B4FC218E8D5600ACFE0B /* MFNetWorkingRequestEngine.m in Sources */,
-				E2772F51218FF8B500DCD680 /* MFApiStatus.m in Sources */,
+				E2772F8321901E9F00DCD680 /* MFApiStatus.m in Sources */,
+				E253B460219153B4005325A9 /* MFNetWorkingRequestCommonParameterHeader.m in Sources */,
+				E2772F9621901EB600DCD680 /* MFNetWorkingRequestBaseEngine.m in Sources */,
+				E2772FA121901ED000DCD680 /* MFNetWorkingRequestManager.m in Sources */,
+				E2772F9B21901EBD00DCD680 /* MFRequest+RequestExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

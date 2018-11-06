@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "MFNetWorking.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface MFNetWorkingManager : NSObject
 
 /**
@@ -20,47 +18,28 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (MFNetWorkingManager *)sharedInstance;
 
-/**
- *  This method is used to add custom header
- *
- *  @param header            custom header added by user
- *
- */
-- (void)addCustomHeader:(NSDictionary *)header;
-
-
-/**
- *  This method is used to return custom header
- *
- *  @return custom header
- */
-- (NSDictionary *)customHeaders;
 
 /**
  *  This method is used to send GET request, not consider whether to write cache & not consider whether to load cache
  *
  *  @param url                 request url
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendGetRequest:(NSString *)url
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
+               handler:(MFRequestCompletionHandler)handler;
 
 /**
  *  This method is used to send GET request, not consider whether to write cache & not consider whether to load cache
  *
  *  @param url                 request url
  *  @param parameters          parameters
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendGetRequest:(NSString *)url
             parameters:(id)parameters
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
+               handler:(MFRequestCompletionHandler)handler;
 
 
 /**
@@ -70,15 +49,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param url                 request url
  *  @param parameters          parameters
  *  @param loadCache           consider whether to load cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendGetRequest:(NSString *)url
             parameters:(id)parameters
              loadCache:(BOOL)loadCache
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
+               handler:(MFRequestCompletionHandler)handler;
 
 /**
  *  This method is used to send GET request,
@@ -87,15 +64,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param url                 request url
  *  @param parameters          parameters
  *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendGetRequest:(NSString *)url
             parameters:(id)parameters
          cacheDuration:(NSTimeInterval)cacheDuration
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
+               handler:(MFRequestCompletionHandler)handler;
 
 /**
  *  This method is used to send GET request,
@@ -105,16 +80,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param parameters          parameters
  *  @param loadCache           consider whether to load cache
  *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendGetRequest:(NSString *)url
             parameters:(id)parameters
              loadCache:(BOOL)loadCache
          cacheDuration:(NSTimeInterval)cacheDuration
-               success:(MFSuccessBlock)successBlock
-               failure:(MFFailureBlock)failureBlock;
+               handler:(MFRequestCompletionHandler)handler;
 
 
 /**
@@ -123,15 +96,12 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param url                request url
  *  @param parameters         parameters
- *  @param successBlock       success callback
- *  @param failureBlock       failure callback
+ *  @param handler            handler callback
  *
  */
 - (void)sendPostRequest:(NSString *)url
              parameters:(id)parameters
-                success:(MFSuccessBlock)successBlock
-                failure:(MFFailureBlock)failureBlock;
-
+                handler:(MFRequestCompletionHandler)handler;
 
 
 /**
@@ -141,15 +111,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param url                 request url
  *  @param parameters          parameters
  *  @param loadCache           consider whether to load cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendPostRequest:(NSString *)url
              parameters:(id)parameters
               loadCache:(BOOL)loadCache
-                success:(MFSuccessBlock)successBlock
-                failure:(MFFailureBlock)failureBlock;
+                handler:(MFRequestCompletionHandler)handler;
 
 /**
  *  This method is used to send POST request,
@@ -158,15 +126,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param url                 request url
  *  @param parameters          parameters
  *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendPostRequest:(NSString *)url
              parameters:(id)parameters
           cacheDuration:(NSTimeInterval)cacheDuration
-                success:(MFSuccessBlock)successBlock
-                failure:(MFFailureBlock)failureBlock;
+                handler:(MFRequestCompletionHandler)handler;
 
 
 /**
@@ -177,16 +143,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param parameters          parameters
  *  @param loadCache           consider whether to load cache
  *  @param cacheDuration       consider whether to write cache
- *  @param successBlock        success callback
- *  @param failureBlock        failure callback
+ *  @param handler             handler callback
  *
  */
 - (void)sendPostRequest:(NSString *)url
              parameters:(id)parameters
               loadCache:(BOOL)loadCache
           cacheDuration:(NSTimeInterval)cacheDuration
-                success:(MFSuccessBlock)successBlock
-                failure:(MFFailureBlock)failureBlock;
+                handler:(MFRequestCompletionHandler)handler;
 
 /**
  *  This method is used to upload image
@@ -286,7 +250,6 @@ NS_ASSUME_NONNULL_BEGIN
                         failure:(MFUploadFailureBlock)uploadFailureBlock;
 
 
-
 /**
  *  This method is used to upload image
  *
@@ -338,9 +301,6 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(MFUploadSuccessBlock)uploadSuccessBlock
                        failure:(MFUploadFailureBlock)uploadFailureBlock;
 
-
-
-
 /**
  *  This method is used to upload images(or only one image)
  *
@@ -364,9 +324,6 @@ NS_ASSUME_NONNULL_BEGIN
                        progress:(MFUploadProgressBlock)uploadProgressBlock
                         success:(MFUploadSuccessBlock)uploadSuccessBlock
                         failure:(MFUploadFailureBlock)uploadFailureBlock;
-
-
-
 
 /**
  *
@@ -394,182 +351,6 @@ NS_ASSUME_NONNULL_BEGIN
                         failure:(MFUploadFailureBlock)uploadFailureBlock;
 
 
-
-#pragma mark- Request API download files
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param downloadFilePath         target path of download file
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-           downloadFilePath:(NSString *)downloadFilePath
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-
-
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param ignoreBaseUrl            consider whether to ignore configured base url
- *  @param downloadFilePath         target path of download file
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-              ignoreBaseUrl:(BOOL)ignoreBaseUrl
-           downloadFilePath:(NSString *)downloadFilePath
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-
-
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param downloadFilePath         target path of download file
- *  @param resumable                consider whether to save or load resumble data
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-           downloadFilePath:(NSString *)downloadFilePath
-                  resumable:(BOOL)resumable
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param ignoreBaseUrl            consider whether to ignore configured base url
- *  @param downloadFilePath         target path of download file
- *  @param resumable                consider whether to save or load resumble data
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-              ignoreBaseUrl:(BOOL)ignoreBaseUrl
-           downloadFilePath:(NSString *)downloadFilePath
-                  resumable:(BOOL)resumable
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param downloadFilePath         target path of download file
- *  @param backgroundSupport        consider whether to support background downlaod
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-           downloadFilePath:(NSString *)downloadFilePath
-          backgroundSupport:(BOOL)backgroundSupport
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param ignoreBaseUrl            consider whether to ignore configured base url
- *  @param downloadFilePath         target path of download file
- *  @param backgroundSupport        consider whether to support background downlaod
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-              ignoreBaseUrl:(BOOL)ignoreBaseUrl
-           downloadFilePath:(NSString *)downloadFilePath
-          backgroundSupport:(BOOL)backgroundSupport
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param downloadFilePath         target path of download file
- *  @param resumable                consider whether to save or load resumble data
- *  @param backgroundSupport        consider whether to support background downlaod
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-           downloadFilePath:(NSString *)downloadFilePath
-                  resumable:(BOOL)resumable
-          backgroundSupport:(BOOL)backgroundSupport
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-
-
-/**
- *  These methods are used to download file
- *
- *  @param url                      request url
- *  @param ignoreBaseUrl            consider whether to ignore configured base url
- *  @param downloadFilePath         target path of download file
- *  @param resumable                consider whether to save or load resumble data
- *  @param backgroundSupport        consider whether to support background downlaod
- *  @param downloadProgressBlock    download progress callback
- *  @param downloadSuccessBlock     download success callback
- *  @param downloadFailureBlock     download failure callback
- *
- */
-- (void)sendDownloadRequest:(NSString *)url
-              ignoreBaseUrl:(BOOL)ignoreBaseUrl
-           downloadFilePath:(NSString *)downloadFilePath
-                  resumable:(BOOL)resumable
-          backgroundSupport:(BOOL)backgroundSupport
-                   progress:(MFDownloadProgressBlock)downloadProgressBlock
-                    success:(MFDownloadSuccessBlock)downloadSuccessBlock
-                    failure:(MFDownloadFailureBlock)downloadFailureBlock;
-
-
-
 /**
  *  This method is used to cancel all current requests
  */
@@ -578,4 +359,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+
